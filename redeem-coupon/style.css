@@ -1,0 +1,289 @@
+/* Add CSS here */
+* {
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+
+body {
+    background-color: #FBE9E6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.casette {
+    font-family: sans-serif;
+    width: 510px;
+    background-color: black;
+    box-shadow: 0px 0px 50px rgba(0,0,0,.3);
+    border-radius: 11px;
+    padding: 25px 28px 80px;
+}
+
+.screw {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgb(121, 104, 91);
+    background: linear-gradient(10deg, rgba(121, 104, 91, 1) 0%, rgba(237, 218, 201, 1) 100%);
+    border-radius: 50px;
+    rotate: 45deg;
+    color: #886E61;
+    font-weight: 900;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screw:nth-child(1) {
+    margin-top: -18px;
+    margin-left: -20px;
+}
+.screw:nth-child(2) {
+    margin-top: -18px;
+    margin-left: 460px;
+}
+.screw:nth-child(3) {
+    margin-top: 269px;
+    margin-left: -20px;
+}
+.screw:nth-child(4) {
+    margin-top: 269px;
+    margin-left: 460px;
+}
+.screw:nth-child(5) {
+    margin-top: 225px;
+    margin-left: 230px;
+}
+
+.label {
+    background-color: #FFFBF2;
+    border-radius: 8px;
+}
+
+.label::after {
+    content: "";
+    border-bottom: solid #2F2F2F 1.5px;
+    height: 20px;
+    /* border-bottom: solid red 1.5px; */
+    position: absolute;
+    margin-top: -17px;
+    width: 453px;
+    border-radius: 8px;
+}
+
+.line {
+    height: 27px;
+    border-bottom: #D1CCC4 1px solid;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 7px 2px 0;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-size: 16px;
+    font-optical-sizing: auto;
+}
+
+.code {
+    background-color: rgba(225, 167, 251,.4);
+    font-family: monospace;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.code svg {
+    transform: translateY(3px);
+}
+
+.ribbon {
+    margin-top: 20px;
+}
+
+.ribbon .strip {
+    height: 16.5px;
+}
+
+.strip.red{background-color: #EA556F;}
+.strip.orange{background-color: #EF7C52;}
+.strip.yellow{background-color: #F0EA70;}
+.strip.green{background-color: #228244;}
+.strip.blue{background-color: #268CCC;}
+
+.centre {
+    height: 82.5px;
+    background-color: black;
+    margin: -82.5px auto 0;
+    width: 306px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.reel-box {
+    background-color: #E3E3E3;
+    height: 49.5px;
+    width: 100px ;
+    overflow: clip;
+}
+
+.reel {
+    background-color: #2F1F21;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    position: relative;
+    top: -25px;
+}
+.left-reel {
+    left: -50px;
+
+}
+.right-reel {
+    top: -125px;
+    right: -80px
+}
+
+.spoke {
+    background-color: #E0E0E0;
+    height:54px;
+    width: 54px;
+    border-radius: 99px;
+}
+
+.notch {
+    background-color: #BDBDBD;
+    width: 6px;
+    height: 6px;
+    position: relative;
+}
+
+.notch:nth-child(1) {
+    top: 24px;
+    left: 45px;
+}
+
+.notch:nth-child(2) {
+    transform: rotate(60deg);
+    top: 36px;
+    left: 35px;
+}
+
+.notch:nth-child(3) {
+    transform: rotate(-60deg);
+    top: 31px;
+    left: 14px;
+}
+
+.notch:nth-child(4) {
+    top: 6px;
+    left: 2px;
+}
+
+.notch:nth-child(5) {
+    transform: rotate(60deg);
+    top: -20px;
+    left: 14px;
+}
+
+.notch:nth-child(6) {
+    transform: rotate(-60deg);
+    top: -25px;
+    left: 35px;
+}
+
+.footer {
+    text-align: left;
+    height: 45.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 22px;
+}
+
+.footer div + div {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.diff-notch {
+    border-top: solid #2F2F2F 1.5px;
+    width: 304px;
+    margin: 9px auto 0;
+}
+
+.diff-notch::before {
+    content: "";
+    position: absolute;
+    background-color: #2F2F2F;
+    margin-left: -11px;
+    width: 1.5px;
+    height: 80px;
+    transform: skew(-15deg);
+}
+.diff-notch::after {
+    content: "";
+    position: absolute;
+    background-color: #2F2F2F;
+    margin-left: 315px;
+    width: 1.5px;
+    height: 80px;
+    transform: skew(15deg);
+}
+
+.hole {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background: white;
+}
+
+.hole.circle {
+    border-radius: 50px;
+    margin-top: 53px;
+}
+.hole.square {
+    border-radius: 5px;
+    margin-top: 45px;
+}
+
+.hole:nth-child(1) {
+    margin-left: 30px
+}
+.hole:nth-child(2) {
+    margin-left: 274px
+}
+.hole:nth-child(3) {
+    margin-left: 80px
+}
+.hole:nth-child(4) {
+    margin-left: 224px
+}
+.casette-side-thing {
+    z-index: -1;
+    background-color: black;
+    position: absolute;
+    margin-top: 155px;
+    border-radius: 10px;
+    width: 515px;
+    height: 82px;
+}
+
+.bg-ribbon {
+    z-index: -3;
+    position: absolute;
+    bottom: 0;
+    width: 300vw;
+    transform: rotate(-45deg);
+}
+
+.bg-ribbon .strip {
+    height: 90px;
+}
