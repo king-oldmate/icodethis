@@ -1,0 +1,189 @@
+/* Write your CSS code here */
+:root {
+    --white: rgba(255, 255, 255, .9);
+}
+* {padding: 0; margin: 0; box-sizing: border-box;}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #3b4b68;
+    font-size: 14px;
+}
+
+.card {
+    width: 346px;
+    height: 625px;
+    margin: calc((100vh - 625px) / 2) auto;
+    background-color: white;
+} 
+
+.header {
+    color: var(--white);
+    background-image: url('https://picsum.photos/id/931/346/244.jpg');
+    width: 346px;
+    height: 244px;
+    display: grid;
+    grid-template-columns: 66px 192px 66px;
+    grid-template-rows: 33px 104px 33px 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 14px 11px;
+    text-align: center;
+    align-items: center;
+}
+
+.header button {
+    border: 0;
+    color: var(--white);
+    background-color: rgba(0,0,0,.2);
+    height: 30px;
+    border-radius: 30px;
+    transition: background .2s ease-out;
+}
+
+.header button:hover {
+    background-color: rgba(0,0,0,.8);}
+
+.back-btn { 
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: left;
+    padding-left: 7px;
+    align-items: center;
+}
+.name { 
+    grid-area: 1 / 2 / 2 / 3; 
+    color: #5c6576;
+}
+.menu-btn { 
+    grid-area: 1 / 3 / 2 / 4; 
+    width: 52px;
+    justify-self: right;
+} 
+.profile-pic { 
+    grid-area: 2 / 2 / 3 / 3;
+
+    align-self: flex-start;
+} 
+.profile-pic img {
+    width: 84px;
+    height: 84px;
+    border-radius: 84px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .2);
+}
+.info { 
+    grid-area: 3 / 2 / 4 / 3; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 16px;
+}
+
+.info span {
+    font-size: 12px;
+    opacity: .6;
+}
+.actions { 
+    grid-area: 4 / 1 / 5 / 4; 
+    border: 1px solid var(--white);
+    height: 33px;
+    border-radius: 33px;
+    justify-self: center;
+    display: flex;
+    justify-content: space-around;
+    width: 214px;
+    align-items: center;
+    align-self: flex-end;
+    overflow: hidden;
+    cursor: pointer;
+} 
+
+.actions span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 50%;
+    height: 100%;
+    fill: var(--white);
+    transition: background .2s ease-out, color .2s ease-out, fill .2s ease-out;
+
+}
+
+.actions span:hover {
+    background-color: var(--white);
+    color: rgba(0, 0, 0, .6);
+    fill: rgba(0, 0, 0, .6);
+}
+
+.actions span:first-child {
+    border-right: 1px solid var(--white);
+
+}
+
+.album-container {
+    padding-top: 29px;
+}
+
+.album-switcher {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 22px;
+}
+
+.album-details { 
+        color: rgba(0, 0, 0, .6);
+        font-size: 16px;
+        width: 50%;
+        text-align: center;
+}
+.album-switcher button {
+    background: #f5f5f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    height: 20px; 
+    width: 20px;
+    border: 0;
+    transition: background .2s ease-out;
+}
+
+.album-switcher button:hover {
+    background: #d1d1d1;
+}
+
+.album-switcher svg {
+    opacity: .8
+}
+.gallery {
+    margin: 2px;
+    height: 306px;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: flex;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+.album {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    transition: margin .5s ease-out;
+    padding: 2px;
+    margin-left: -2px;
+}
+
+.gallery img {
+    transition: scale .1s ease-out;
+}
+.gallery img:hover {
+    scale: 1.03;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 1.5;
+}
